@@ -1,0 +1,136 @@
+.nav {
+	padding: 2.6em 1.8em 6em;
+	background-color: var(--bg-pattern);
+	border-radius: 0 0 30px 30px;
+	z-index: 1;
+	transition: background-color 0.3s;
+
+	&-container {
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+
+	&-title {
+		margin-bottom: 0.2em;
+		font-size: 1.53rem;
+		font-weight: 700;
+		color: var(--second-text);
+	}
+
+	&-text {
+		margin: 0;
+		font-weight: bold;
+		font-size: 0.88rem;
+		color: var(--text);
+	}
+
+	&-line {
+		margin: 2em 0 1em;
+		width: 100%;
+		height: 1px;
+		background-color: var(--text);
+		transition: background-color 0.3s;
+	}
+
+	&-mode {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-btn {
+		position: relative;
+		padding: 0.9em 1.8em;
+		border: none;
+		border-radius: 999px;
+		background-color: var(--toggle-light);
+		transition: background-color 0.3s;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+		}
+
+		&::after {
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: var(--toggle-dark-gradient);
+			border-radius: 999px;
+			z-index: -1;
+		}
+
+		&::before {
+			width: 18px;
+			height: 18px;
+			top: 50%;
+			right: 8%;
+			transform: translateY(-50%);
+			background-color: var(--bg-pattern);
+			border-radius: 50%;
+			transition: background-color 0.3s, transform 0.3s;
+			z-index: 2;
+		}
+
+		&.active {
+			background-color: transparent;
+
+			&::before {
+				background-color: var(--bg-pattern);
+				transform: translate(-120%, -50%);
+			}
+		}
+	}
+}
+
+@media (min-width: 720px) {
+	.nav {
+		padding: 2.6em 2.8em 6em;
+
+		&-container {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			max-width: 1200px;
+		}
+		&-line {
+			display: none;
+		}
+		&-mode {
+			justify-content: left;
+			gap: 1em;
+		}
+	}
+}
+
+@media (min-width: 930px) {
+	.nav {
+		padding: 2.6em 2.9em 6em;
+
+		&-btn {
+			cursor: pointer;
+
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+@media (min-width: 1020px) {
+	.nav {
+		padding: 2.6em 3.2em 6em;
+	}
+}
+
+@media (min-width: 1200px) {
+	.nav {
+		padding: 2.6em 4em 6em;
+
+		&-container {
+			display: grid;
+			grid-template-columns: 1fr auto;
+		}
+	}
+}

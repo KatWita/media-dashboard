@@ -1,0 +1,45 @@
+.today {
+	background-color: var(--card-bg);
+	padding: 2em 1.7em;
+	border-radius: 8px;
+	transition: background-color 0.3s;
+	cursor: pointer;
+	
+	&:hover {
+		background-color: var(--card-hover);
+	}
+
+	&-social-box,
+	&-number-box,
+	&-percentage-box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&-type,
+	&-number,
+	&-percentage {
+		font-weight: 700;
+	}
+
+	&-type {
+		text-transform: capitalize;
+		font-size: 0.9rem;
+	}
+
+	&-number-box {
+		align-items: flex-end;
+		margin-top: 2.3em;
+	}
+
+	&-number {
+		color: var(--second-text);
+		font-size: 2rem;
+		line-height: 1.5rem;
+	}
+
+	&-percentage-box {
+		gap: 0.3em;
+	}
+}

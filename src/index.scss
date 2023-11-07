@@ -1,0 +1,55 @@
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/*? ### Primary */
+	--lime-green: hsl(163, 72%, 41%);
+	--bright-red: hsl(356, 69%, 56%);
+	--white: hsl(0, 0%, 100%);
+	--facebook: #1a8ef5;
+	--twitter: #1ca0f2;
+	--instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+	--youTube: #c40329;
+	--toggle-light: hsl(230, 22%, 74%);
+	--toggle-dark-gradient: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+	//? light theme
+	--bg: hsl(0, 0%, 100%);
+	--bg-pattern: hsl(225, 100%, 98%);
+	--card-bg: hsl(227, 47%, 96%);
+	--card-hover: hsl(226, 33%, 90%);
+	--text: hsl(228, 12%, 44%);
+	--second-text: hsl(230, 17%, 14%);
+
+	.dark-mode {
+		--bg: hsl(230, 17%, 14%);
+		--bg-pattern: hsl(232, 19%, 15%);
+		--card-bg: hsl(228, 28%, 20%);
+		--card-hover: hsl(230, 27%, 27%);
+		--text: hsl(228, 34%, 66%);
+		--second-text: hsl(0, 0%, 100%);
+	}
+}
+
+body {
+	min-height: 100vh;
+	font-size: 0.875rem;
+	font-family: 'Inter', sans-serif;
+	background-color: var(--bg);
+	transition: background-color 0.3s, color 0.3s;
+}
+
+h1,
+h2,
+p {
+	transition: color 0.3s;
+}
+
+p {
+	color: var(--text);
+}
